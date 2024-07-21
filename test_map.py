@@ -5,7 +5,8 @@ from folium.features import CustomIcon
 
 # Sample data for specific locations in Latin America
 locations = [
-    {'location': 'Jujuy', 'coords': (-23.816, -65.417)},
+    {'location': 'De BOL - a ARG', 'coords': (-23.816, -65.417)},
+    {'location': 'De ARG - a BOL', 'coords': (-23.8, -65.4)},
     {'location': 'Sucre', 'coords': (-19.0333, -65.2627)},
     {'location': 'Umuarama', 'coords': (-23.765, -53.3204)},
     {'location': 'Posadas', 'coords': (-27.3626, -55.8976)},
