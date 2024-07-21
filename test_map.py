@@ -5,17 +5,19 @@ from folium.features import CustomIcon
 
 # Sample data for specific locations in Latin America
 locations = [
-    {'location': 'De BOL - a ARG', 'coords': (-23.816, -65.417)},
-    {'location': 'De ARG - a BOL', 'coords': (-23.8, -65.4)},
-    {'location': 'Sucre', 'coords': (-19.0333, -65.2627)},
-    {'location': 'Umuarama', 'coords': (-23.765, -53.3204)},
+    {'location': 'Expo ARG-BOL', 'coords': (-24, -65)},
+    {'location': 'Impo ARG-BOL', 'coords': (-23, -66)},
+    {'location': 'Expo BOL-ARG', 'coords': (-18, -64)},
+    {'location': 'Impo BOL-ARG', 'coords': (-19, -65)},
+    {'location': 'Expo ARG-BRL', 'coords': (-24, -54)},
+    {'location': 'Impo ARG-BRL', 'coords': (-23, -53)},
     {'location': 'Posadas', 'coords': (-27.3626, -55.8976)},
     {'location': 'Salto', 'coords': (-31.3833, -57.9667)},
     {'location': 'Parana', 'coords': (-31.73197, -60.5238)},
 ]
 
 exchanges = [
-    {'from': 'Jujuy', 'to': 'Sucre', 'value': 0.7, 'from_coords': (-23.816, -65.417), 'to_coords': (-19.0333, -65.2627)},
+    {'from': 'Expo ARG-BOL', 'to': 'Impo BOL-ARG', 'value': 0.7, 'from_coords': (-24, -65), 'to_coords': (-19, -65)},
     {'from': 'Umuarama', 'to': 'Posadas', 'value': 384, 'from_coords': (-23.765, -53.3204), 'to_coords': (-27.3626, -55.8976)},
     {'from': 'Salto', 'to': 'Parana', 'value': 203, 'from_coords': (-31.3833, -57.9667), 'to_coords': (-31.73197, -60.5238)},
 ]
@@ -36,6 +38,7 @@ for location in locations:
     folium.Marker(
         location=location['coords'],
         popup=popup,
+        icon = folium.Icon(icon='arrow-up',color='red'),
         tooltip=location['location']
     ).add_to(m)
 
